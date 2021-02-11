@@ -21,6 +21,18 @@ class Console:
         """
         return input(prompt)
 
+    def read_number(self, prompt):
+        """Gets numerical input from the user through the screen.
+
+        Args: 
+            self (Screen): An instance of Screen.
+            prompt (string): The prompt to display to the user.
+
+        Returns:
+            integer: The user's input as an integer.
+        """
+        return int(input(prompt))
+
     def read_word(self, prompt):
         """Gets numerical input from the user through the screen.
 
