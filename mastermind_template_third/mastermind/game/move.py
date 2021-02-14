@@ -1,14 +1,13 @@
 import random
 
 class Move:
-    """A maneuver in the game. The responsibility of Move is to keep track of the stones to remove and which pile to remove them from.
+    """A maneuver in the game. The responsibility of Move is to hold the guess information from the user.
     
     Stereotype: 
         Information Holder
 
     Attributes:
-        _pile (integer): The pile to remove from.
-        _stones (integer): The number of stones to remove.
+        _guess (string): holds the users 4 digit number guess.
     """
     def __init__(self, guess):
         """The class constructor.
@@ -19,7 +18,7 @@ class Move:
         self._guess = guess
 
     def get_guess(self):
-        """Returns the pile to remove from.
+        """Returns the user's guess.
 
         Args:
             self (Move): an instance of Move.
