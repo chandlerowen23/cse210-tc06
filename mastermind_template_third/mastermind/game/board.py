@@ -64,8 +64,7 @@ class Board:
         return self.hint
 
     def apply(self, move):
-        """Applies the given move to the playing surface. In this case, that
-        means removing a number of stones from a pile.
+        """Applies the given move to the playing surface..
 
         Args:
             self (Board): an instance of Board.
@@ -111,13 +110,13 @@ class Board:
         return text
 
     def is_equal(self):
-        """Determines if all the stones have been removed from the board.
+        """Determines if the guess string is equal to the numbers.
 
         Args:
             self (Board): an instance of Board.
 
         Returns:
-            boolean: True if the board has no stones on it; false if otherwise.
+            boolean: True if number and guess are the same.
         """
 
         if self.guess[-4:] == self._num:
