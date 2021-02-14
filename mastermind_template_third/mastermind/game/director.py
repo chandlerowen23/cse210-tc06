@@ -52,16 +52,10 @@ class Director:
 
         for n in range(2):
             name = self._console.read(f"Enter a name for player {n+1}: ")
-           # print('this is the name', name)
             player = Player(name)
             self._roster.add_player(player)
             self.names.append(name)
-        #print('this are the names', self.names)
 
-
-
-
-        
 
     def get_inputs(self):
         """Gets the inputs at the beginning of each round of play. In this case,
@@ -83,7 +77,6 @@ class Director:
 
         
         
-
 
     def do_updates(self):
         """Updates the important game information for each round of play. In 
