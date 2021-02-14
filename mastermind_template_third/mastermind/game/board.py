@@ -38,11 +38,11 @@ class Board:
 
 
     def _create_hint(self, move):
-        """Generates a hint based on the given code and guess.
+        """Generates a hint based on the given num and guess.
 
         Args:
             self (Board): An instance of Board.
-            code (string): The code to compare with.
+            num (string): The code to compare with.
             guess (string): The guess that was made.
 
         Returns:
@@ -62,22 +62,6 @@ class Board:
                 self.hint += "*"
 
         return self.hint
-
-    def apply(self, move):
-        """Applies the given move to the playing surface..
-
-        Args:
-            self (Board): an instance of Board.
-            move (Move): The move to apply.
-        """
-
-        self.guess_out = move.get_guess()
-        guess1 = str(self.guess_out)
-
-        self.hint = self._create_hint(move)
-        print('this is number', self._num)
-        self.items = [self._num, self.guess, self.hint]
-
 
 
 
@@ -137,6 +121,7 @@ class Board:
         """
         self.names = names
         return names
+
 
 
 
