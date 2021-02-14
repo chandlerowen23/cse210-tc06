@@ -2,25 +2,29 @@ import random
 
 
 class Board:
-    """A designated playing surface. The responsibility of Board is to keep track of the pieces in play.
+    """A designated playing surface. The responsibility of Board is to keep track of the numbers in play.
     
     Stereotype: 
         Information Holder
 
     Attributes:
-        _items (string): holds the guess, hint and num data
-        guess (string): placeholder for the user information to fill in
-        hint (string): stars will fill correct guesses
-        equal (boolean): to compare two strings
-        _num (string): this creates a random number but then changes it to a string format to compare
-        names (list): to hold all the names of the players playing
+        _create_hint: gets the move and checks to see if any numbers match criteria.
+        apply: changes the output of the board so it is updated.
+        to_string: this function allows the console to output the board in text format to text format for the user.
+        is_equal: compares strings
+        get_names: gets the passed in player names
     """
 
     def __init__(self):
         """The class constructor.
         
         Args:
-            self (Board): an instance of Board.
+            _items (string): holds the guess, hint and num data
+        guess (string): placeholder for the user information to fill in
+        hint (string): stars will fill correct guesses
+        equal (boolean): to compare two strings
+        _num (string): this creates a random number but then changes it to a string format to compare
+        names (list): to hold all the names of the players playing
         """
         self._items = ''
         self.guess = "--------"
