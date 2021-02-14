@@ -8,7 +8,12 @@ class Board:
         Information Holder
 
     Attributes:
-        _piles (list): The number of piles of stones.
+        _items (string): holds the guess, hint and num data
+        guess (string): placeholder for the user information to fill in
+        hint (string): stars will fill correct guesses
+        equal (boolean): to compare two strings
+        _num (string): this creates a random number but then changes it to a string format to compare
+        names (list): to hold all the names of the players playing
     """
 
     def __init__(self):
@@ -84,9 +89,6 @@ class Board:
         """
 
         names = self.get_names(self.names)
-       # print('====================')
-        #print(names[0])
-
         text = "\n------------------------------------------"
         if len(self.hint) % 8 == 0:
             text += "\n Player " + f"{names[0]}: "
@@ -121,11 +123,16 @@ class Board:
 
 
     def get_names(self,names):
+        """Determines what names were added to the game and keeps them in text format.
 
+        Args:
+            self (Board): an instance of Board.
+            names (Director): a list of names from prep function.
+        
+        Returns:
+            list: all names input to the game
+        """
         self.names = names
-        #print('++++++++++++++++++')
-        #print('is this?',self.names)
-        #print('++++++++++++++++++')
         return names
 
 
