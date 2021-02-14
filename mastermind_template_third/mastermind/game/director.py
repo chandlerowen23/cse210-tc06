@@ -87,7 +87,7 @@ class Director:
         """
         player = self._roster.get_current()
         move = player.get_move()
-        self._board.apply(move)
+        self._board._create_hint(move)
 
         
     def do_outputs(self):
@@ -105,7 +105,6 @@ class Director:
             print(f"\n{name} won!")
             self._keep_playing = False
             exit()
-
-
+            
         else:
             self._roster.next_player()
