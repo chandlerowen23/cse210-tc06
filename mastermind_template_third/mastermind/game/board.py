@@ -26,7 +26,7 @@ class Board:
         _num (string): this creates a random number but then changes it to a string format to compare
         names (list): to hold all the names of the players playing
         """
-        self._items = ''
+       
         self.guess = "--------"
         self.hint  = "********"
         self.equal = False
